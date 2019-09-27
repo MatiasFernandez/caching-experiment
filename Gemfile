@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 ruby '2.4.5'
 
+gem 'dalli'
+
+gem 'rack-cache'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
 # Use sqlite3 as the database for Active Record
