@@ -22,5 +22,15 @@ module CachingExperiment
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    require 'rack/traffic_logger'
+
+    config.middleware.insert(
+      0,
+      Rack::TrafficLogger,
+      STDOUT,
+      Rack::TrafficLogger::Formatter::Stream.new(color: true, pretty_print: true),
+      :headers
+    )
   end
 end
