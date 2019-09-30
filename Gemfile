@@ -2,9 +2,17 @@ source 'https://rubygems.org'
 
 ruby '2.4.5'
 
+gem 'awesome_print'
+
 gem 'dalli'
 
+gem 'pry-byebug'
+
+gem 'pry-rails'
+
 gem 'rack-cache'
+
+gem 'rack-traffic-logger'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.8'
